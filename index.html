@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnDodaj").click(function(){
+
+                $( "#omotGrafova" ).append( "<div class='graf'></div>" );
+
+                $( function() {
+                    $( ".graf" ).draggable();
+                });
+
+            });
+        });
+    </script>
+
+
+
+<style>
+div.hr {
+    width:100%;
+    height: 1px;
+    background: #7F7F7F;
+    position:relative;
+    margin-top:15px;
+}
+div.hr:after {
+    content:'';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -14px;
+    left: 50%;
+}
+div.hr:before {
+    content:'';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: #7F7F7F transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -15px;
+    left: 50%;
+}
+</style>
+
+
+
+
+</head>
+
+    <body>
+        <a href="javascript:void(0)" id="btnDodaj">DODAJ</a>
+
+        <div id="omotGrafova"> </div>
+
+
+
+
+
+<div class="hr"></div>
+
+
+
+
+
+    </body>
+
+</html>
